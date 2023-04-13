@@ -1,0 +1,154 @@
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+root {
+  --color-transparent: rgba(000, 000, 000, 0.65);
+}
+
+.header__theme {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+.header__content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__image {
+  margin-top: 10px;
+}
+
+.header__theme-title {
+  color: #fff;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.position__title {
+  display: flex;
+  align-items: end;
+}
+
+.u-pl-10 {
+  padding-left: 10px;
+}
+
+.title__content {
+  padding: 130px 20px;
+}
+
+.title__mid-theme {
+  font-weight: 900;
+  font-size: 48px;
+  color: #fff;
+}
+
+.title__mid-theme__small {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.title__mid-small {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+
+.name__music {
+  display: flex;
+  padding: 10px 20px;
+  background: #181823;
+  width: 176px;
+  height: 63px;
+  border-radius: 0 20px 20px 0;
+}
+
+.c-name-music__title-style {
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+
+.c-name-music__title-theme {
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 4px;
+}
+
+.content__music-theme {
+  display: flex;
+}
+.content__coracao {
+  margin-left: 14px;
+  margin-top: 10px;
+}
+
+.u-mb-4 {
+  margin-bottom: 0.25rem;
+}
+
+.config-music {
+  position: sticky;
+  top: 0;
+}
+
+.grid {
+  display: grid;
+}
+
+.footer {
+  position: fixed;
+  display: grid;
+  height: 100px;
+  grid-template-columns: 150px 1fr auto;
+  bottom: 0;
+  grid-gap: 20px;
+  background: var(--color-transparent);
+  padding: 20px 20px 100px;
+  width: 100%;
+}
+
+.image-footer {
+  display: flex;
+}
+
+.config-music__options {
+  position: fixed;
+  width: 100%;
+  top: unset;
+  bottom: 0;
+}
+
+.container {
+  background-image: url(../images/kimetsu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background-theme {
+  max-width: 100%;
+}
+
+.mobile {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 568px) {
+  .desktop {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
