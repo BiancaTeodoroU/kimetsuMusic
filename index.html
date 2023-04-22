@@ -9,21 +9,69 @@
 </head>
 <body>
     <div class="container">
-        <header class="header__content">
-            <img class="header__theme-menu" src="./images/menuHamburguer.png" alt="" width="32px" height="32px">
-                <h3 class="header__theme-title text-center">Kimetsu Music</h3>
-                <img class="header__image" src="./images/user.svg" alt="">
-        </header>
-        <section class="title__content">
-            <div class="position__title">
-                <h1 class="title__mid-theme">Kimetsu</h1>
-                <h4 class="title__mid-theme__small u-pl-10">no</h4>
+        <header class="header">
+            <div class="header__items">
+                <div class="header__items--desktop">
+                    <span class="header__item header__item--start">Inicio</span>
+                    <span class="header__item header__item--favorites">Favoritos</span>
+                </div>
+                <div class="header__item header__item--theme-menu"></div>
+                <span class="header__item header__item--theme-title">Kimetsu Music</span>
+                <div class="header__item header__item--image-background">
+                    <img class="header__item--image-desktop" src="./images/user.svg" alt="">
+                    <span class="header__item--name">Bianca</span>
+                    <div class="header__item--image"></div>
+                </div>
             </div>
-            <h1 class="title__mid-theme">Yaiba</h1>
-            <h4 class="title__mid-small">estúdio ufotable</h4>
+        </header>
+        <section class="image__background">
+            <img class="image" src="./images/kimetsuDesktop.png" alt="">
+            <span class="background__letra-theme">Lótus Carmesim Entendi o motivo pelo qual poderia ser forte
+                Me leve adiante com você<br>
+                Intoxicado pelas luzes lamacentas
+                O coração enrijecido
+                Minhas mãos tremem, há algo que quero segurar firme
+                Isso é o bastante
+                <br><br>
+                O cheiro da noite (gastarei as trinta noites inteiras)
+                Bravo, encaro o céu (encarando o céu)
+                Apenas eu posso mudar a mim mesmo
+                Isso é o bastante
+                <br><br>
+                Entendi o motivo pelo qual poderia ser forte
+                Me leve adiante com você
+                <br><br>
+                Não importa o quê!
+                Sonhos que não puderam ser apagados, não podem ser parados agora
+                Se eu conseguisse me tornar forte para alguém
+                Oh, obrigado, tristeza!
+                <br><br>
+                Fui derrotado pelo mundo, aprendi o significado de proteger
+                Oh, lótus carmesim, floresça com orgulho!
+                Ilumine o destino
+                <br><br>
+                O som do trovão perfurou o meu ouvido
+                Coração confuso
+                Apenas ser gentil, não é o bastante para proteger alguém
+                Sei disso....
+            </span>
+        </section>
+        <section class="title">
+            <div class="title__content">
+                <h1 class="title__theme">Kimetsu</h1>
+                <h2 class="title__theme--small u-pl-10">no</h2>
+            </div>
+            <h1 class="title__theme">Yaiba</h1>
+            <h2 class="title__theme--author">estúdio ufotable</h2>
         </section>
         <section class="name__music">
             <div class="content__music-theme">
+                <div class="image__content">
+                    <img src="./images/kimetsuDesktop.png" alt="">
+                    <div class="background-music">
+                        <span></span>
+                    </div>
+                </div>
                 <div class="content__music-position">
                     <h2 class="c-name-music__title-style">Opening 1</h2>
                     <h3 class="c-name-music__title-theme">Lisa</h3>
@@ -33,20 +81,41 @@
                 </div>
             </div>
         </section>
-        <footer class="footer grid grid-template-columns">
-            <div>
-                <div class="controlls">
-                    <div class="image-footer">
-                        <img src="./images/recharge.svg" alt="">
-                    </div>
-                    <div class="theme__play">
-                        <img src="./images/arrow-left.svg" alt="">
-                        <img src="./images/play.svg" alt="">
-                        <img src="./images/arrow-right.svg" alt="">
+        <div class="navbar">
+            <div class="navbar__content-desktop">
+                <div class="navbar__item--description-music">
+                    <img class="navbar__item--image-music" src="./images/lisa.png" alt="">
+                    <div class="content__music-theme navbar__item--space">
+                        <div class="content__music-position">
+                            <h2 class="c-name-music__title-style">Opening 1</h2>
+                            <h3 class="c-name-music__title-theme">Lisa</h3>
+                        </div>
+                        <div class="content__coracao">
+                            <img src="./images/coracao.svg" alt="">
+                        </div>
                     </div>
                 </div>
+                <div class="content__config--music">
+                    <ul class="navbar__items">
+                        <li class="navbar__item navbar__item--repeat"></li>
+                        <li class="navbar__item navbar__item--arrow-left"></li>
+                        <li class="navbar__item navbar__item--play"></li>
+                        <li class="navbar__item navbar__item--arrow-right"></li>
+                        <li class="navbar__item navbar__item--recharge"></li>
+                    </ul>
+                    <ul class="navbar__loading">
+                        <li class="navbar__item navbar__item--start-music">00:00</li>
+                        <li class="navbar__item navbar__item--loading"></li>
+                        <li class="navbar__item navbar__item--end-music">03:06</li>
+                    </ul>
+                </div>
+                <div class="song">
+                    <img src="./images/volume.svg" alt="">
+                    <span class="song__config"></span>
+                    <img src="./images/diminuirTela.svg" alt="">
+                </div>
             </div>
-        </footer>
+        </div>
     </div>
 </body>
 </html>

@@ -1,3 +1,5 @@
+@import url(./mediaquery.scss);
+
 body {
     font-family: 'Red Hat Display', sans-serif;
 }
@@ -12,29 +14,142 @@ root {
     --color-transparent: rgba(000, 000, 000, 0.65);
 }
 
-.header {
-    &__theme {
-        display: flex;
-        justify-content: space-around;
-        margin: 20px auto;
-    }
+/* Header */
 
-    &__content {
+.header {
+    &__items {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        height: 4.938rem;
+        list-style: none;
     }
 
-    &__image {
-        margin-top: 10px;
+    &__item {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px auto;
+
+        &--theme-menu::before {
+            content: url(../images/menuHamburguer.png);
+        }
+
+        &--theme-title {
+            color: #fff;
+            font-weight: 900;
+            font-size: 22px;
+        }
+
+        &--image::before {
+            content: url(../images/user.svg);
+        }
     }
 }
 
-.header {
-    &__theme-title {
-        color: #fff;
+/* Navbar */
+.navbar {
+    position: fixed;
+    bottom: 0;
+    background-color: #181823;
+    border-radius: 32px 32px 0 0;
+    width: 100vw;
+    opacity: 0.9;
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        list-style: none;
+        width: 70%;
+        margin: 1rem auto 0 auto;
+    }
+
+    &__loading {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        align-items: center;
+        width: 80%;
+        margin: 8px auto 12px;
+    }
+
+    &__item {
+        font-size: .75rem;
+        text-align: center;
+
+        ::before {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        &--recharge::before {
+            content: url("../images/recharge.svg");
+        }
+        
+        &--arrow-left::before {
+            content: url("../images/arrow-left.svg");        
+        }
+
+        &--play::before {
+            content: url("../images/play.svg");
+        }
+
+        &--arrow-right::before {
+            content: url("../images/arrow-right.svg");         
+        }
+
+        &--repeat::before {
+            content: url("../images/repeat.svg");
+        }
+
+        &--start-music {
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        &--loading {
+            background: linear-gradient(180deg, #537FE7 0%, #0E8388 100%);
+            height: 4px;
+            width: 250px;
+            min-width: 70%;
+            margin: 0 0.5rem;
+        }
+
+        &--end-music {
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+
+/* Title */
+
+.title {
+    padding: 10rem 1.25rem;
+
+    &__content {
+        display: flex;
+        align-items: end;
+    }
+
+    &__theme {
         font-weight: 900;
-        font-size: 22px;
+        font-size: 48px;
+        color: #fff;
+
+        &--small {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 4px;
+            color: #fff;
+        }
+
+        &--author {
+            font-weight: 700;
+            font-size: 16px;
+            color: #fff;
+        }
     }
 }
 
@@ -49,40 +164,18 @@ root {
     padding-left: 10px;
 }
 
-.title {
-    &__content {
-        padding: 130px 20px;
-    }
-}
 
-.title {
-    &__mid-theme {
-        font-weight: 900;
-        font-size: 48px;
-        color: #fff;
-    }
-}
-
-.title {
-    &__mid-theme__small {
-    font-size: 28px;
-    font-weight: 900;
-    margin-bottom: 4px;
-    color: #fff;
-    }
-}
-
-.title {
-    &__mid-small {
-        font-weight: 700;
-        font-size: 16px;
-        color: #fff;
-    }
+.color-white {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .name {
     &__music {
         display: flex;
+        position: absolute;
+        top: 550px;
         padding: 10px 20px;
         background: #181823;
         width: 176px;
@@ -132,22 +225,6 @@ root {
     display: grid;
 }
 
-.footer {
-    position: fixed;
-    display: grid;
-    height: 100px;
-    grid-template-columns: 150px 1fr auto;
-    bottom: 0;
-    grid-gap: 20px;
-    background: var(--color-transparent);
-    padding: 20px 20px 100px;
-    width: 100%;
-}
-
-.image-footer {
-    display: flex;
-}
-
 .config-music {
     &__options {
         position: fixed;
@@ -163,6 +240,7 @@ root {
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    object-fit: cover;
 }
 
 .background-theme {
@@ -176,6 +254,261 @@ root {
 
 @media (max-width: 568px) {
     .desktop {
+        display: none;
+    }
+}
+
+.controlls {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.theme {
+    &__play {
+        display: flex;
+        &--background {
+            display: flex;
+            background: #000101;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.play {
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+    object-fit: cover;
+}
+
+/* mediaquery */
+
+
+@media (min-width: 470px) {
+    .container {
+        background-image: url(../images/kimetsuDesktop.png);
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        background-image: none;
+    }
+
+    .name__music {
+        display: none;
+    }
+
+    .container {
+        overflow: hidden;
+    }
+
+    .header {
+        background: #181823;
+        
+        &__items {
+            height: 3rem;
+
+            &--desktop {
+                display: flex;
+            }
+        }
+        
+        &__list {
+            list-style: none;
+        }
+
+        &__item {
+            margin: 20px;
+
+            &--name {
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+                font-size: 14px;
+                color: #FFFFFF;
+            }
+
+            &--image {
+                display: none;
+                
+                &-background {
+                    background: #635985;
+                    border-radius: 5px;
+                    width: 110px;
+                    height: 35px;                            
+                }
+
+                &-desktop {
+                    position: relative;
+                    right: 4px;
+                    left: 0;
+                }
+            }
+
+            &--start {
+                color: white;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            &--favorites {
+                color: white;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            &--theme {
+                &-menu {
+                    display: none;
+                }
+
+                &-title {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .navbar {
+        border-radius: 0;
+        opacity: 1;
+        height: 75px;
+
+        &__content {
+            &-desktop {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        &__loading {
+            width: 100%;
+        }
+
+        &__items {
+            width: 100%;
+        }
+
+        &__item {
+            &--image {
+                &-music {
+                    width: 50px;
+                    height: 50px;
+                    margin: 20px;
+                }
+            }
+
+            &--space {
+                margin-top: 20px;
+            }
+
+            &--description {
+                &-music {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .song {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin: 0 20px;
+
+        &__config {
+            background: #A3A1A1;
+            height: 4px;
+            width: 100px;
+            min-width: 10%;
+            margin: 0 10px;
+            display: flex;
+        }
+        
+        &__config::before {
+            content: "";
+            background: #000000;
+            height: 6px;
+            min-width: 50%;
+        }
+    }
+
+    .image {
+        &__background {
+            display: flex;
+            background: #181823;
+            height: 100%;
+        }
+    }
+
+    .image {
+        width: 70%;
+        max-width: 100%;
+        height: 600px;
+    }
+
+    .background__letra-theme {
+        color: white;
+        margin: 20px;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .header {
+        &__item {
+
+            &--image {
+                display: none;
+            }
+
+            &--start {
+                display: none;
+            }
+
+            &--favorites {
+                display: none;
+            }
+
+            &--name {
+                display: none;
+            }
+        }
+    }
+
+    .navbar {
+        &__item {
+            &--description {
+                &-music {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .song {
+        display: none;
+    }
+
+    .image {
+        &__content {
+            display: none;
+        }
+    }
+
+    .image {
+        &__background {
+            display: none;
+        }
+    }
+    .title {
         display: none;
     }
 }
