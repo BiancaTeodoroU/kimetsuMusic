@@ -313,7 +313,7 @@ root {
         background: #181823;
         
         &__items {
-            height: 3rem;
+            height: 3.6rem;
 
             &--desktop {
                 display: flex;
@@ -401,7 +401,7 @@ root {
                 &-music {
                     width: 50px;
                     height: 50px;
-                    margin: 20px;
+                    margin: 15px 20px 0 50px;
                 }
             }
 
@@ -421,7 +421,7 @@ root {
         display: flex;
         align-items: center;
         justify-content: end;
-        margin: 0 20px;
+        margin: 0 50px;
 
         &__config {
             background: #A3A1A1;
@@ -444,7 +444,6 @@ root {
         &__background {
             display: flex;
             background: #181823;
-            height: 100%;
         }
     }
 
@@ -507,8 +506,5 @@ root {
         &__background {
             display: none;
         }
-    }
-    .title {
-        display: none;
     }
 }

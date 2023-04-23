@@ -267,7 +267,7 @@ root {
     background: #181823;
   }
   .header__items {
-    height: 3rem;
+    height: 3.6rem;
   }
   .header__items--desktop {
     display: flex;
@@ -333,7 +333,7 @@ root {
   .navbar__item--image-music {
     width: 50px;
     height: 50px;
-    margin: 20px;
+    margin: 15px 20px 0 50px;
   }
   .navbar__item--space {
     margin-top: 20px;
@@ -345,7 +345,7 @@ root {
     display: flex;
     align-items: center;
     justify-content: end;
-    margin: 0 20px;
+    margin: 0 50px;
   }
   .song__config {
     background: #A3A1A1;
@@ -364,7 +364,6 @@ root {
   .image__background {
     display: flex;
     background: #181823;
-    height: 100%;
   }
   .image {
     width: 70%;
@@ -399,9 +398,6 @@ root {
     display: none;
   }
   .image__background {
-    display: none;
-  }
-  .title {
     display: none;
   }
 }/*# sourceMappingURL=style.css.map */
